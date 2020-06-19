@@ -183,7 +183,11 @@ class NodeSSH {
           throw err
         }
       }
-    } else if (config.publicKey != null) {
+    } else if (config.password != null) {
+      invariant(typeof config.password === 'string', 'config.password must be a valid string')
+    }
+
+    if (config.publicKey != null) {
       invariant(typeof config.publicKey === 'string', 'config.publicKey must be a valid string')
       // Must be an fs path
       try {
@@ -194,8 +198,6 @@ class NodeSSH {
         }
         throw err
       }
-    } else if (config.password != null) {
-      invariant(typeof config.password === 'string', 'config.password must be a valid string')
     }
 
     if (config.tryKeyboard != null) {
