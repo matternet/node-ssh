@@ -2712,28 +2712,19 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
-ssh2-streams@mscdex/ssh2-streams#pull/137/head:
-  version "0.4.4"
-  resolved "https://codeload.github.com/mscdex/ssh2-streams/tar.gz/447a0c6360b5f9606db6384b5ba3d7ad6327115e"
-  dependencies:
-    asn1 "~0.2.0"
-    bcrypt-pbkdf "^1.0.2"
-    streamsearch "~0.1.2"
-
-ssh2-streams@~0.4.4:
+ssh2-streams@matternet/ssh2-streams#master:
   version "0.4.10"
-  resolved "https://registry.yarnpkg.com/ssh2-streams/-/ssh2-streams-0.4.10.tgz#48ef7e8a0e39d8f2921c30521d56dacb31d23a34"
-  integrity sha512-8pnlMjvnIZJvmTzUIIA5nT4jr2ZWNNVHwyXfMGdRJbug9TpI3kd99ffglgfSWqujVv/0gxwMsDn9j9RVst8yhQ==
+  resolved "https://codeload.github.com/matternet/ssh2-streams/tar.gz/28d08a61fb505aaf587b4f712753be4e67ab8bd9"
   dependencies:
     asn1 "~0.2.0"
     bcrypt-pbkdf "^1.0.2"
     streamsearch "~0.1.2"
 
-ssh2@mscdex/ssh2#pull/808/head:
-  version "0.8.5"
-  resolved "https://codeload.github.com/mscdex/ssh2/tar.gz/db0816474f2e61416fb58577d1d68a9c42e8cec0"
+ssh2@matternet/ssh2#master:
+  version "0.8.9"
+  resolved "https://codeload.github.com/matternet/ssh2/tar.gz/901726fbf10e27dfbfe62b4e4d8a134caf7679f5"
   dependencies:
-    ssh2-streams "~0.4.4"
+    ssh2-streams matternet/ssh2-streams#master
 
 stack-utils@^2.0.1:
   version "2.0.2"
