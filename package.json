@@ -37,7 +37,7 @@
     "ava": "^3.7.0",
     "eslint-config-steelbrain": "^9.0.1",
     "node-pty": "^0.9.0",
-    "ssh2-streams": "^0.4.10",
+    "ssh2-streams": "mscdex/ssh2-streams#pull/137/head",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
   },
@@ -46,7 +46,7 @@
     "sb-promise-queue": "^2.0.0",
     "sb-scandir": "^3.0.0",
     "shell-escape": "^0.2.0",
-    "ssh2": "^0.8.9"
+    "ssh2": "mscdex/ssh2#pull/808/head"
   },
   "ava": {
     "files": [
