@@ -12,6 +12,7 @@ import { Prompt, Stats, TransferOptions } from 'ssh2-streams'
 type Config = ConnectConfig & {
   password?: string
   privateKey?: string
+  publicKey?: string
   tryKeyboard?: boolean
   onKeyboardInteractive?: (
     name: string,
@@ -184,6 +185,19 @@ class NodeSSH {
       }
     } else if (config.password != null) {
       invariant(typeof config.password === 'string', 'config.password must be a valid string')
+    }
+
+    if (config.publicKey != null) {
+      invariant(typeof config.publicKey === 'string', 'config.publicKey must be a valid string')
+      // Must be an fs path
+      try {
+        config.publicKey = await readFile(config.publicKey)
+      } catch (err) {
+        if (err != null && err.code === 'ENOENT') {
+          throw new AssertionError({ message: 'config.publicKey does not exist at given fs path' })
+        }
+        throw err
+      }
     }
 
     if (config.tryKeyboard != null) {

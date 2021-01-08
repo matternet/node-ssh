@@ -128,9 +128,9 @@
   integrity sha512-7kUdtJtUylvyISJbe9FMcvMTjRdP0EvNDO1WbT0lT22k/IPBiPRTpmWaKu5HTWLCGLQRWVHrzVHZktTDvvR23g==
 
 "@types/ssh2-streams@*":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@types/ssh2-streams/-/ssh2-streams-0.1.6.tgz#1ff5b1fe50c15f282efe9fd092c68494f8702bc2"
-  integrity sha512-NB+SYftagfHTDPdgVyvSZCeg5MURyHECd/PycGIW9hwhnEbTFxIdDbFtf3jxUO3rRnfr0lfdtkZFiv28T1cAsg==
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@types/ssh2-streams/-/ssh2-streams-0.1.7.tgz#bf79349ec85a4dfb5b3fd9f4a05af729121f07e6"
+  integrity sha512-cQNV72C+BOG7G8WNGarTQdB2Ii37cJlWatSpx5zTYxtI2ZvUt2lbq6Nc2XZ4kbge28V7Xe5KYYr82d96/rDMnQ==
   dependencies:
     "@types/node" "*"
 
@@ -2712,21 +2712,19 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
-ssh2-streams@^0.4.10, ssh2-streams@~0.4.10:
+ssh2-streams@matternet/ssh2-streams#master:
   version "0.4.10"
-  resolved "https://registry.yarnpkg.com/ssh2-streams/-/ssh2-streams-0.4.10.tgz#48ef7e8a0e39d8f2921c30521d56dacb31d23a34"
-  integrity sha512-8pnlMjvnIZJvmTzUIIA5nT4jr2ZWNNVHwyXfMGdRJbug9TpI3kd99ffglgfSWqujVv/0gxwMsDn9j9RVst8yhQ==
+  resolved "https://codeload.github.com/matternet/ssh2-streams/tar.gz/28d08a61fb505aaf587b4f712753be4e67ab8bd9"
   dependencies:
     asn1 "~0.2.0"
     bcrypt-pbkdf "^1.0.2"
     streamsearch "~0.1.2"
 
-ssh2@^0.8.9:
+ssh2@matternet/ssh2#master:
   version "0.8.9"
-  resolved "https://registry.yarnpkg.com/ssh2/-/ssh2-0.8.9.tgz#54da3a6c4ba3daf0d8477a538a481326091815f3"
-  integrity sha512-GmoNPxWDMkVpMFa9LVVzQZHF6EW3WKmBwL+4/GeILf2hFmix5Isxm7Amamo8o7bHiU0tC+wXsGcUXOxp8ChPaw==
+  resolved "https://codeload.github.com/matternet/ssh2/tar.gz/901726fbf10e27dfbfe62b4e4d8a134caf7679f5"
   dependencies:
-    ssh2-streams "~0.4.10"
+    ssh2-streams matternet/ssh2-streams#master
 
 stack-utils@^2.0.1:
   version "2.0.2"

@@ -1,7 +1,7 @@
 .idea
 node_modules
 *.log
-/lib
+/lib/cjs
 .DS_Store
 /test/fixtures/ignored
 /test/fixtures/ignored-2
