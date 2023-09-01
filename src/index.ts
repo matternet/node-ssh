@@ -118,7 +118,7 @@ async function makeDirectoryWithSftp(path: string, sftp: SFTPWrapper) {
         if (err) {
           reject(err)
         } else {
-          resolve()
+          resolve(null)
         }
       })
     })
@@ -229,7 +229,7 @@ class NodeSSH {
       }
       connection.on('ready', () => {
         connection.removeListener('error', reject)
-        resolve()
+        resolve(null)
       })
       connection.on('end', () => {
         if (this.connection === connection) {
@@ -455,7 +455,7 @@ class NodeSSH {
           if (err) {
             reject(err)
           } else {
-            resolve()
+            resolve(null)
           }
         })
       })
@@ -490,7 +490,7 @@ class NodeSSH {
       return new Promise((resolve, reject) => {
         sftp.fastPut(localFile, unixifyPath(remoteFile), transferOptions || {}, err => {
           if (err == null) {
-            resolve()
+            resolve(null)
             return
           }
 

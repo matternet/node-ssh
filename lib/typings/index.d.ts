@@ -1,7 +1,8 @@
 /// <reference types="node" />
+/// <reference types="node" />
 import { Client, ConnectConfig, ClientChannel, SFTPWrapper, ExecOptions } from 'ssh2';
 import { Prompt, TransferOptions } from 'ssh2-streams';
-declare type Config = ConnectConfig & {
+type Config = ConnectConfig & {
     password?: string;
     privateKey?: string;
     publicKey?: string;
@@ -36,7 +37,7 @@ interface SSHGetPutDirectoryOptions extends SSHPutFilesOptions {
     validate?: (path: string) => boolean;
     recursive?: boolean;
 }
-declare type SSHMkdirMethod = 'sftp' | 'exec';
+type SSHMkdirMethod = 'sftp' | 'exec';
 declare class NodeSSH {
     connection: Client | null;
     private getConnection;
